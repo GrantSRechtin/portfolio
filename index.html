@@ -4,12 +4,49 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Grant Rechtin Portfolio</title>
+		<title>Grant Rechtin | Robotics Engineering Portfolio</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Portfolio of Grant Rechtin, a robotics engineering student at Olin College of Engineering working on embedded hardware, PCB design, robotics software, and full stack development." />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Small additions on top of the Prologue theme */
+			#main section .container { text-align: left; }
+			#main section header { text-align: center; }
+			#main section.cover .container,
+			#main section#contact .container { text-align: center; }
+			.section-intro { text-align: center; max-width: 42em; margin: 0 auto 2.5em; }
+
+			/* Project cards */
+			.item { overflow: hidden; }
+			.item .image.fit { margin: 0; }
+			.item .card-head { padding: 1.25em 1.25em 0; text-align: left; }
+			.item .card-head h3 { margin: 0 0 0.2em; }
+			.item .card-body { padding: 0.75em 1.25em 1.25em; text-align: left; }
+			.item .card-body p { margin: 0 0 1em; }
+			.meta { font-size: 0.85em; color: #8a949c; margin: 0; }
+
+			/* Skill tags */
+			ul.tags { list-style: none; padding: 0; margin: 0 0 1em; display: flex; flex-wrap: wrap; gap: 0.4em; }
+			ul.tags li { padding: 0.1em 0.65em; border-radius: 3px; background: #e8eef2; color: #3a4750; font-size: 0.8em; line-height: 1.9; }
+
+			/* Experience entries */
+			.experience-entry { margin: 0 auto 2.75em; max-width: 48em; }
+			.experience-entry h3 { margin: 0 0 0.2em; }
+			.experience-entry .meta { margin-bottom: 0.9em; }
+			.experience-entry ul.points { list-style: disc; padding-left: 1.25em; margin: 0 0 1em; }
+			.experience-entry ul.points li { padding-left: 0.25em; margin-bottom: 0.5em; }
+
+			/* Skills grid */
+			.skill-group h3 { margin-bottom: 0.5em; }
+			.skill-group p { margin-bottom: 1.5em; }
+
+			/* Contact links */
+			ul.contact-links { list-style: none; padding: 0; margin: 0; }
+			ul.contact-links li { margin-bottom: 0.6em; }
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -20,17 +57,20 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="Grant Rechtin" /></span>
 							<h1 id="title">Grant Rechtin</h1>
-							<p>Robotics Engineer</p>
+							<p>Robotics Engineering Student</p>
 						</div>
 
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="#experience" id="experience-link"><span class="icon solid fa-briefcase">Experience</span></a></li>
 								<li><a href="#current-projects" id="current-projects-link"><span class="icon solid fa-th">Current Projects</span></a></li>
-								<li><a href="#past-projects" id="past-projects-link"><span class="icon solid fa-user">Past Projects</span></a></li>
+								<li><a href="#past-projects" id="past-projects-link"><span class="icon solid fa-archive">Past Projects</span></a></li>
+								<li><a href="#skills" id="skills-link"><span class="icon solid fa-cogs">Skills</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
 							</ul>
 						</nav>
 
@@ -40,7 +80,9 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<li><a href="https://github.com/GrantSRechtin" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://github.com/GrantSRechtin" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://linkedin.com/in/grant-rechtin-7a8910345" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:Gsullivanr@icloud.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 
 				</div>
@@ -56,222 +98,339 @@
 
 							<header>
 								<h2 class="alt">Hi, I'm <strong>Grant Rechtin</strong></h2>
-								<p>I'm currently a sophomore at Olin College of Engineering 
-									studying Engineering with Robotics
-								</p>
+								<p>I'm a junior at Franklin W. Olin College of Engineering studying Engineering with a focus in Robotics.
+									Most of my work sits where hardware and software meet, from custom PCBs and STM32 firmware
+									to ROS-based robot control and production web software.</p>
+								<p>I'm looking for Summer 2027 internships.</p>
 							</header>
 
 							<footer>
-								<a href="#current projects" class="button scrolly">Current Projects</a>
-								<a href="#past projects" class="button scrolly">Past Projects</a>
+								<a href="#experience" class="button scrolly">Experience</a>
+								<a href="#current-projects" class="button scrolly">Projects</a>
+								<a href="files/Grant_Rechtin_Resume.pdf" class="button">Resume</a>
 							</footer>
 
 						</div>
 					</section>
 
-				<!-- Portfolio -->
-					<section id="current-projects" class="two">
+				<!-- Experience -->
+					<section id="experience" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Experience</h2>
+							</header>
+
+							<article class="experience-entry">
+								<h3>Software Engineering Intern, Sunfire Inc. (IntelligenceX team)</h3>
+								<p class="meta">Summer 2026 (June to August)</p>
+								<p>I worked on a team of about 15 engineers across multiple repositories, using trunk-based
+									development and code review on GitHub. Code review taught me a lot about writing code
+									that other people can pick up and work with.</p>
+								<ul class="points">
+									<li>Owned full stack delivery of an audit reporting tool for AI risk score overrides. I wrote the
+										Ruby on Rails controllers, queries, and migrations, and built the React and TypeScript front end
+										with filters, pagination, CSV export, and interactive metrics. The tool shipped to production on
+										an enterprise healthcare platform.</li>
+									<li>Added External API endpoints and commands with authentication in mind, and fixed UX issues on a
+										platform used to review and analyze calls.</li>
+									<li>Helped reorganize the UI architecture around Storybook, working with engineers across the team to
+										replace one-off components with a shared, reusable component library.</li>
+								</ul>
+								<ul class="tags">
+									<li>Ruby on Rails</li>
+									<li>React</li>
+									<li>TypeScript</li>
+									<li>REST APIs</li>
+									<li>Storybook</li>
+									<li>Git</li>
+								</ul>
+							</article>
+
+							<article class="experience-entry">
+								<h3>Sensing Sub-team Member, Olin Electric Motorsports (Formula SAE)</h3>
+								<p class="meta">Fall 2024 to present</p>
+								<ul class="points">
+									<li>Designed and fabricated a custom sensor interface PCB for suspension data acquisition, along with the
+										signal processing that turns raw voltage into real-time displacement measurements.</li>
+									<li>Currently adapting the wheel speed sensing boards and software to a new Hall effect sensor, then
+										testing and calibrating the setup for test drives and competition.</li>
+								</ul>
+							</article>
+
+							<article class="experience-entry">
+								<h3>Team Member, Olin Farm Robotics</h3>
+								<p class="meta">2026 to present</p>
+								<ul class="points">
+									<li>Developing sampling location optimization and multi-agent path planning for soil sampling drones in
+										Python and Gazebo.</li>
+								</ul>
+							</article>
+
+							<article class="experience-entry">
+								<h3>FIRST Robotics, Regis Jesuit High School</h3>
+								<p class="meta">2020 to 2024. Safety Lead (2022 to 2023), Senior Mentor (2023 to 2024)</p>
+								<ul class="points">
+									<li>Programmed autonomous and teleoperated control systems for FRC competition robots.</li>
+									<li>Led scouting operations, coordinating data collection and analysis to drive match strategy.</li>
+									<li>Mentored younger team members in programming and safety practices.</li>
+								</ul>
+							</article>
+
+						</div>
+					</section>
+
+				<!-- Current Projects -->
+					<section id="current-projects" class="three">
 						<div class="container">
 
 							<header>
 								<h2>Current Projects</h2>
 							</header>
 
-							<p>
-								This section consists of school, extracurricular, or personal projects 
-								that I'm am current working to complete.
-							</p>
+							<p class="section-intro">School, research, and team projects I'm working on now.</p>
 
 							<div class="row">
+
 								<div class="col-6 col-12-mobile">
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/magfit_socket_cad.png" alt="" /></a>
-										<header>
-											<h3>CAD of prosthetic socket mold</h3>
-										</header>
-									</article>
-									<article class="item" style="margin-top: 100px">
-										<header>
-											<h2><strong>FSAE Wheel Speed Calibration</strong></h2>
-											<h3>As part of Olin's Formula SAE racing team, I'm currently adapted wheel 
-												speed boards and software from the previous cycle. I'm making the switch 
-												from the previous used distance sensor to the 
-												<a href="https://www.enemiesracingaustralia.com.au/products/zf-npn-hall-effect-sensor?utm_source=coda&utm_medium=iframely">ZF / CHERRY Hall Effect Sensor </a>
-												which better matches our use case. I will also be testing and calibrating 
-												this setup to be used during test drives and competition.
-											</h3>
-											<br>
-											<a href="https://olinelectricmotorsports.com/">Olin Electrical Motorsports</a>
-										</header>
-									</article>
-									<article class="item">
-										<header>
-											<h2><strong>Skills and Tools</strong></h2>
-											<h3>KiCAD<br>
-												PCB Design<br>
-												Integration<br>
-												Software Development and Testing<br>
-												Hall Effect Sensors
-											</h3>
-										</header>
+										<span class="image fit"><img src="images/magfit_socket_cad.png" alt="CAD model of the prosthetic socket mold" /></span>
+										<div class="card-head">
+											<h3>MagFit Prosthetics</h3>
+											<p class="meta">Independent research, Fall 2025 to present</p>
+										</div>
+										<div class="card-body">
+											<p>An independent research project with two other students to build a prosthetic socket that adjusts
+												its own fit using magnetorheological elastomers (MREs). I'm designing the multi-channel pressure
+												sensing system that maps pressure inside the socket, including the analog signal conditioning and
+												the STM32 firmware for data acquisition. I'm also writing the control software that uses that
+												pressure data to drive electropermanent magnets, and we're starting to bring machine learning into
+												the fitting logic.</p>
+											<ul class="tags">
+												<li>STM32</li>
+												<li>C++</li>
+												<li>Circuit Design</li>
+												<li>Sensors</li>
+												<li>Data Analysis</li>
+												<li>Machine Learning</li>
+											</ul>
+											<a href="https://coda.io/d/_dIDirlzlZNb/Timeline_suUXd6_2">Project documentation</a>
+										</div>
 									</article>
 								</div>
+
 								<div class="col-6 col-12-mobile">
 									<article class="item">
-										<header>
-											<h2><strong>MagFit Prosthetics</strong></h2>
-											<h3>Magfit Prosthetics as a independent student research project two other students
-												and I are taking on with the goal of developing a automatic fit-adjusting 
-												prosthetic socket using magneto fluidic materials. I'm personally working 
-												on designing and developing a sensing apparatus to monitor and map 
-												pressure within prosthetic socket along with software using pressure data 
-												to control and adjust the fit.
-											</h3>
-											<br>
-											<a href="https://coda.io/d/_dIDirlzlZNb/Timeline_suUXd6_2">Project Documentation</a>
-										</header>
-									</article>
-									<article class="item">
-										<header>
-											<h2><strong>Skills and Tools</strong></h2>
-											<h3>STM32 microcontrollers and software<br>C++<br>Circuit Analysis and Design<br>Data Analysis
-											</h3>
-										</header>
-									</article>
-									<article class="item" style="margin-top: 145px">
-										<a href="#" class="image fit"><img src="images/ws_pcb.png" alt="" /></a>
-										<header>
-											<h3>Wheel Speed PCB Layout</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/hall_effect_sensor.png" alt="" /></a>
-										<header>
-											<h3>CHERRY Hall Effect Sensor</h3>
-										</header>
+										<span class="image fit"><img src="images/ws_pcb.png" alt="Wheel speed sensor PCB layout in KiCAD" /></span>
+										<div class="card-head">
+											<h3>FSAE Wheel Speed Sensing</h3>
+											<p class="meta">Olin Electric Motorsports, 2025 to present</p>
+										</div>
+										<div class="card-body">
+											<p>I'm adapting last cycle's wheel speed boards and software to use a
+												<a href="https://www.enemiesracingaustralia.com.au/products/zf-npn-hall-effect-sensor">ZF / CHERRY Hall effect sensor</a>,
+												which fits our use case better than the distance sensor we used before. I'm also testing and
+												calibrating the full setup so it's reliable for test drives and competition.</p>
+											<ul class="tags">
+												<li>KiCAD</li>
+												<li>PCB Design</li>
+												<li>Hall Effect Sensors</li>
+												<li>Testing and Calibration</li>
+												<li>Integration</li>
+											</ul>
+											<a href="https://olinelectricmotorsports.com/">Olin Electric Motorsports</a>
+										</div>
 									</article>
 								</div>
+
+								<div class="col-6 col-12-mobile">
+									<article class="item">
+										<div class="card-head">
+											<h3>Multi-Agent Soil Sampling via Drones</h3>
+											<p class="meta">Olin Farm Robotics, 2026 to present</p>
+										</div>
+										<div class="card-body">
+											<p>Farmers need soil samples spread across a field, and collecting them by hand is slow. I'm developing
+												optimization algorithms that pick spatially efficient sampling locations to maximize field coverage,
+												and multi-agent path planning that routes several autonomous drones between those points. I'm
+												building and testing it in simulation with Python and Gazebo.</p>
+											<ul class="tags">
+												<li>Python</li>
+												<li>Gazebo</li>
+												<li>Path Planning</li>
+												<li>Optimization</li>
+												<li>Multi-Agent Systems</li>
+											</ul>
+										</div>
+									</article>
+								</div>
+
 							</div>
 
 						</div>
 					</section>
-		
-					<section id="past-projects" class="three">
+
+				<!-- Past Projects -->
+					<section id="past-projects" class="four">
 						<div class="container">
 
 							<header>
 								<h2>Past Projects</h2>
 							</header>
 
-							<p>
-								This section consists of school, extracurricular, or personal projects 
-								that I have completed either personally or as part of a team.
-							</p>
+							<p class="section-intro">Projects I've completed on my own or as part of a team.</p>
 
 							<div class="row">
-								<!-- Left Column -->
+
 								<div class="col-6 col-12-mobile">
-									<!-- Image for Project 1 -->
 									<article class="item">
-										<a href="#" class="image fit"><img src="images/full_assembly.jpeg" alt="" /></a>
-										<header>
-											<h3>Full Mechanical Assembly of CNC Cake Frosting Device</h3>
-										</header>
-									</article>
-									<!-- Writing for Project 2 -->
-									<article class="item" style="margin-top: 80px">
-										<header>
-											<h2><strong>3D Object Reconstruction Using Robotic Arm & Gaussian Splatting</strong></h2>
-											<h3>As part of a team we developed software to manipulate our WidowX arm to complete a full 
-												3D scan of some object, using a camera attached to the end effector. We then were 
-												able to complete a full Reconstruction using gaussian splatting. Within this project 
-												I worked directly with the arm, developing the code to control the camera and path 
-												for our use case. Our work can be found within the site linked below.
-											</h3>
-											<br>
-											<a href="https://julianshah.com/gaussian-guy/">Project Website</a>
-										</header>
-									</article>
-									<article class="item">
-										<header>
-											<h2><strong>Skills and Tools</strong></h2>
-											<h3>6-DOF Arm Kinematics<br>
-												Trajectory Generation<br>
-											    Python<br>
-												ROS2<br>
-												Teamwork & Collaboration
-											</h3>
-										</header>
-									</article>
-									<!-- Image for Project 3 -->
-									<article class="item" style="margin-top: 75px">
-										<a href="#" class="image fit"><img src="images/st_pcb.png" alt="" /></a>
-										<header>
-											<h3>Suspension Travel PCB Layout</h3>
-										</header>
+										<span class="image fit"><img src="images/widowx_arm.png" alt="WidowX robotic arm used for 3D scanning" /></span>
+										<div class="card-head">
+											<h3>3D Object Reconstruction with a Robotic Arm</h3>
+											<p class="meta">Team project, Fall 2025</p>
+										</div>
+										<div class="card-body">
+											<p>Our team used a camera mounted on the end effector of a 6-DOF Trossen Robotics WidowX arm to scan an
+												object from every side, then rebuilt it in 3D with Gaussian Splatting. I worked directly with the arm,
+												writing the control code in Python and ROS and generating the camera path around the object.</p>
+											<ul class="tags">
+												<li>Python</li>
+												<li>ROS</li>
+												<li>6-DOF Kinematics</li>
+												<li>Trajectory Generation</li>
+												<li>Gaussian Splatting</li>
+											</ul>
+											<a href="https://julianshah.com/gaussian-guy/">Project website</a>
+										</div>
 									</article>
 								</div>
 
-								<!-- Right Column -->
 								<div class="col-6 col-12-mobile">
-									<!-- Writing for Project 1 -->
 									<article class="item">
-										<header>
-											<h2><strong>CNC Cake Froster</strong></h2>
-											<h3>As part of a team we developed a fully integrated system to frost custom designs 
-												onto cakes of various sizes. Within this project I lead the electrical side, 
-												integrating almost every electrical component. Alongside this, I also worked 
-												on the software, helping test and fine both our python input code and arduino 
-												motor control code. 
-											</h3>
-											<br>
-											<!-- <a href="https://coda.io/d/_dIDirlzlZNb/Timeline_suUXd6_2">Project Documentation</a> -->
-										</header>
-									</article>
-									<article class="item">
-										<header>
-											<h2><strong>Skills and Tools</strong></h2>
-											<h3>Arduino<br>
-											    Python<br>
-												Circuit Analysis and Design<br>
-												3D Manipulation<br>
-												Teamwork & Collaboration
-											</h3>
-										</header>
-									</article>
-									<!-- Image for Project 2 -->
-									<article class="item" style="margin-top: 125px">
-										<a href="#" class="image fit"><img src="images/widowx_arm.png" alt="" /></a>
-										<header>
-											<h3>WidowX Arm Used for 3D Scanning</h3>
-										</header>
-									</article>
-									<!-- Writing for Project 3 -->
-									<article class="item" style="margin-top: 80px">
-										<header>
-											<h2><strong>FSAE Suspension Travel Sensing</strong></h2>
-											<h3>I designed and fabricated a custom sensor interface PCB for suspension data 
-												acquisition along with the signal processing pipelines to convert the voltage outputs 
-												into accurate real-time displacement measurements. This data will be used to help 
-												inform decision in future design cycles.
-											</h3>
-											<br>
-											<a href="https://olinelectricmotorsports.com/">Olin Electrical Motorsports</a>
-										</header>
-									</article>
-									<article class="item">
-										<header>
-											<h2><strong>Skills and Tools</strong></h2>
-											<h3>KiCAD<br>
-												PCB Design<br>
-												Integration<br>
-												Software Development and Testing<br>
-												Linear Potentiometers
-											</h3>
-										</header>
+										<span class="image fit"><img src="images/st_pcb.png" alt="Suspension travel sensor PCB layout in KiCAD" /></span>
+										<div class="card-head">
+											<h3>FSAE Suspension Travel Sensing</h3>
+											<p class="meta">Olin Electric Motorsports</p>
+										</div>
+										<div class="card-body">
+											<p>I designed and fabricated a custom sensor interface PCB for the car's linear potentiometers and wrote
+												the signal processing that converts their voltage output into accurate, real-time suspension
+												displacement. I validated and documented the system so future team members can pick it up, and the
+												data will inform design decisions in future cycles.</p>
+											<ul class="tags">
+												<li>KiCAD</li>
+												<li>PCB Design</li>
+												<li>Signal Processing</li>
+												<li>Linear Potentiometers</li>
+												<li>Validation and Documentation</li>
+											</ul>
+											<a href="https://olinelectricmotorsports.com/">Olin Electric Motorsports</a>
+										</div>
 									</article>
 								</div>
+
+								<div class="col-6 col-12-mobile">
+									<article class="item">
+										<div class="card-head">
+											<h3>LiDAR Particle Filter Localization</h3>
+											<p class="meta">Robotics coursework</p>
+										</div>
+										<div class="card-body">
+											<p>I implemented a particle filter that estimates a mobile robot's position on a known map by comparing
+												its LiDAR scans against what it should see from each candidate pose. The system was built on ROS2.</p>
+											<ul class="tags">
+												<li>ROS2</li>
+												<li>LiDAR</li>
+												<li>Localization</li>
+												<li>Probabilistic Robotics</li>
+											</ul>
+										</div>
+									</article>
+								</div>
+
+								<div class="col-6 col-12-mobile">
+									<article class="item">
+										<span class="image fit"><img src="images/full_assembly.jpeg" alt="Full mechanical assembly of the CNC cake frosting device" /></span>
+										<div class="card-head">
+											<h3>CNC Cake Froster</h3>
+											<p class="meta">Team project</p>
+										</div>
+										<div class="card-body">
+											<p>Our team built a fully integrated machine that frosts custom designs onto cakes of different sizes.
+												I led the electrical side and integrated nearly every electrical component. I also helped test and
+												tune both our Python input code and the Arduino motor control code.</p>
+											<ul class="tags">
+												<li>Arduino</li>
+												<li>Python</li>
+												<li>Circuit Design</li>
+												<li>Motor Control</li>
+												<li>System Integration</li>
+											</ul>
+										</div>
+									</article>
+								</div>
+
 							</div>
+
+						</div>
+					</section>
+
+				<!-- Skills -->
+					<section id="skills" class="five">
+						<div class="container">
+
+							<header>
+								<h2>Skills and Education</h2>
+							</header>
+
+							<div class="row">
+								<div class="col-6 col-12-mobile skill-group">
+									<h3>Programming</h3>
+									<p>Python, C++ (embedded, STM32), TypeScript and JavaScript (React), Ruby on Rails, Arduino</p>
+
+									<h3>Embedded and Electrical</h3>
+									<p>PCB design (KiCAD), circuit analysis, ARM firmware, STM32, SPI, I2C, UART, sensor interfacing and signal conditioning</p>
+
+									<h3>Robotics</h3>
+									<p>ROS and ROS2, Gazebo, arm kinematics and trajectory generation, path planning, localization</p>
+								</div>
+
+								<div class="col-6 col-12-mobile skill-group">
+									<h3>Mechanical and Tools</h3>
+									<p>SolidWorks, Onshape, Git and GitHub, Storybook</p>
+
+									<h3>Education</h3>
+									<p>Franklin W. Olin College of Engineering<br />
+										B.S. in Engineering (Robotics), expected May 2028</p>
+
+									<h3>Relevant Coursework</h3>
+									<p>Fundamentals of Robotics, Computational Robotics, Sensors and Instrumentation, Modeling and Simulation,
+										Software Design, Principles of Integrated Engineering, Biomedical Devices, Engineering Systems Analysis,
+										Linear Algebra, Multivariable Calculus</p>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="six dark">
+						<div class="container">
+
+							<header>
+								<h2>Contact</h2>
+							</header>
+
+							<p>The best way to reach me is by email.</p>
+
+							<ul class="contact-links">
+								<li><a href="mailto:Gsullivanr@icloud.com">Gsullivanr@icloud.com</a></li>
+								<li><a href="https://linkedin.com/in/grant-rechtin-7a8910345">LinkedIn</a></li>
+								<li><a href="https://github.com/GrantSRechtin">GitHub</a></li>
+								<li><a href="files/Grant_Rechtin_Resume.pdf">Resume (PDF)</a></li>
+							</ul>
+
+							<p style="margin-top: 2em;">Outside of engineering I play cello and have been downhill skiing since 2014.</p>
 
 						</div>
 					</section>
@@ -283,7 +442,7 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; 2026 Grant Rechtin. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</div>
